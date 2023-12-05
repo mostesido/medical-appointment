@@ -1,0 +1,28 @@
+<html manifest="FR/CentremedicalN2.manifest">
+<head>
+<script>
+var c=window.applicationCache;
+function rb()
+{
+document.location="http://localhost/CENTREMEDICALN2_WEB/FR/index.php";
+}
+function rc()
+{
+c.swapCache();
+document.location.reload();
+}
+if(c!=null)
+{
+c.addEventListener("error",rb,false);
+c.addEventListener("noupdate",rb,false);
+c.addEventListener("obsolete",rb,false);
+c.addEventListener("cached",rb,false);
+c.addEventListener("updateready",rc,false);
+}
+else rb();
+</script>
+</head>
+<body>
+Chargement en cours...
+</body>
+</html>
